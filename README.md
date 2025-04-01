@@ -22,32 +22,32 @@ With an **interactive GUI**, ParseMate provides a **user-friendly experience** f
 
 ParseMate is built with **cutting-edge NLP and parsing technologies** to ensure accurate and efficient grammar checking.  
 
-### ** Python (Core Language) 🐍**  
+###  Python (Core Language) 🐍
 Python is chosen as the **primary language** due to its:  
 - **Rich ecosystem** for Natural Language Processing (NLP).  
 - **Powerful libraries** that support machine learning and text analysis.  
 - **Ease of integration** with GUI frameworks like Tkinter.  
 
-### ** spaCy (NLP Processing) **  
+###  spaCy (NLP Processing)   
 - A fast and robust NLP library used for:  
   - **Tokenization** (breaking text into words).  
   - **Part-of-Speech (POS) tagging** (identifying nouns, verbs, adjectives, etc.).  
   - **Dependency parsing** (understanding relationships between words).  
 - Helps dynamically extract **grammatical structures** from sentences.  
 
-### ** language-tool-python (Grammar Checking) **  
+###  language-tool-python (Grammar Checking)   
 - An AI-powered grammar checker used to:  
   - Detect **spelling mistakes, grammatical errors, and stylistic issues**.  
   - Provide **contextual suggestions** to improve sentence correctness.  
 - It acts as a **secondary layer of validation** after LL(1) parsing.  
 
-### ** LL(1) Parsing (Context-Free Grammar) **  
+###  LL(1) Parsing (Context-Free Grammar)   
 - A **top-down parsing algorithm** used for:  
   - Validating sentence structure **based on predefined grammar rules (CFG)**.  
   - Ensuring **syntactic correctness** by checking if a sentence conforms to **English syntax**.  
 - Helps **detect structural errors** that AI-based checkers might miss.  
 
-### ** Tkinter (GUI Framework) **  
+###  Tkinter (GUI Framework)   
 - A **lightweight and built-in Python library** used to create the graphical user interface (GUI).  
 - Enables users to **enter a sentence, check its grammar, and view detailed results** in an intuitive way.  
 - Provides an interactive and **easy-to-use** experience.  
@@ -56,20 +56,20 @@ Python is chosen as the **primary language** due to its:
 
 ## **How to Run ParseMate?**   
 
-### ** Install Dependencies**  
+###  Install Dependencies  
 Install the required dependencies by running:  
 
 ```bash
 pip install -r requirements.txt
 ```
 
-### ** If you encounter issues with spaCy models, install them manually: **
+###  If you encounter issues with spaCy models, install them manually: 
 
 ```bash
 python -m spacy download en_core_web_sm
 ```
 
-### ** To launch the ParseMate application, run: **
+###  To launch the ParseMate application, run: 
 
 ```bash
 python gui.py
@@ -77,6 +77,6 @@ python gui.py
 
 ---
 
-## ** The project is made by: **
-Om Mooley
-Madhuj Agrawal
+##  The project is made by: 
+### Om Mooley
+### Madhuj Agrawal
