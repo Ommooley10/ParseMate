@@ -2,35 +2,40 @@ import tkinter as tk
 from tkinter import messagebox
 from parser import check_grammar
 
-# --- FUNCTION TO HANDLE BUTTON CLICK ---
-def on_check_button_click():
-    sentence = entry.get()
-    if sentence.lower() == "exit":
-        window.quit()
-    else:
-        result = check_grammar(sentence)
-        result_text.delete(1.0, tk.END)
-        result_text.insert(tk.END, result)
+def start_gui():
+    # --- SET UP TKINTER WINDOW ---
+    window = tk.Tk()
+    window.title("Grammar Checker")
 
-# --- SET UP TKINTER WINDOW ---
-window = tk.Tk()
-window.title("Grammar Checker")
+    # Entry Label
+    label = tk.Label(window, text="Enter a sentence:")
+    label.pack(padx=10, pady=5)
 
-# Entry Label
-label = tk.Label(window, text="Enter a sentence:")
-label.pack(padx=10, pady=5)
+    # Sentence Input Field
+    entry = tk.Entry(window, width=50)
+    entry.pack(padx=10, pady=5)
 
-# Sentence Input Field
-entry = tk.Entry(window, width=50)
-entry.pack(padx=10, pady=5)
+    # Function to handle button click
+    def on_check_button_click():
+        sentence = entry.get()
+        if sentence.lower() == "exit":
+            window.quit()
+        else:
+            result = check_grammar(sentence)
+            result_text.delete(1.0, tk.END)
+            result_text.insert(tk.END, result)
 
-# Check Button
-check_button = tk.Button(window, text="Check Grammar", command=on_check_button_click)
-check_button.pack(padx=10, pady=10)
+    # Check Button
+    check_button = tk.Button(window, text="Check Grammar", command=on_check_button_click)
+    check_button.pack(padx=10, pady=10)
 
-# Result Text Box
-result_text = tk.Text(window, height=15, width=60)
-result_text.pack(padx=10, pady=10)
+    # Result Text Box
+    result_text = tk.Text(window, height=15, width=60)
+    result_text.pack(padx=10, pady=10)
 
-# Start the Tkinter event loop
-window.mainloop()
+    # Start the Tkinter event loop
+    window.mainloop()
+
+# This ensures the GUI runs if `gui.py` is executed directly
+if __name__ == "__main__":
+    start_gui()
